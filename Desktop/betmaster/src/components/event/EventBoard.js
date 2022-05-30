@@ -10,11 +10,12 @@ function EventBoard({ event }) {
     <div className="game_card">
       <div className="table_board">
         <h4>{event.league.Name}</h4>
-        <p>
+        <p style={{ fontSize: "12px" }}>
           <span>Game start:</span> {gameDate}
         </p>
         <div className="participant">
           <span>{event.participants[0].Name}</span>
+          <p>VS</p>
           <span>{event.participants[1].Name}</span>
         </div>
       </div>

@@ -95,6 +95,28 @@ function App() {
 
   return (
     <div className="App">
+      <div className="indicators">
+        <div className="event">
+          <span>Events</span>
+        </div>
+        <div className="odd_tbls">
+          <div className="odd_indic">
+            <span>1</span>
+            <span>X</span>
+            <span>2</span>
+          </div>
+          <div className="odd_indic">
+            <span>1X</span>
+            <span>12</span>
+            <span>X2</span>
+          </div>
+          <div className="odd_indic">
+            <span>1</span>
+            <span>handi</span>
+            <span>2</span>
+          </div>
+        </div>
+      </div>
       <Event events={events} />
     </div>
   );

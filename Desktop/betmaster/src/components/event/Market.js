@@ -16,17 +16,14 @@ function Market({ markets }) {
   // );
 
   return (
-    <div style={{ display: "flex", justifyContent: "space-between" }}>
+    <>
       <div>
-        <h3>{m1x2?.Name}</h3>
         <Bets1X2 bets={m1x2?.Bets} />
       </div>
       <div>
-        <h3>{mDouble?.Name}</h3>
         <BetsDouble bets={mDouble?.Bets} />
       </div>
       <div>
-        <h3>{mAsianHandicap?.Name}</h3>
         <BetsHandi bets={mAsianHandicap?.Bets} />
       </div>
       {/* <div>
@@ -37,7 +34,7 @@ function Market({ markets }) {
         <h3>{mAsianUnderOver?.Name}</h3>
         <Bets bets={mAsianUnderOver?.Bets} />
       </div> */}
-    </div>
+    </>
   );
 }
 

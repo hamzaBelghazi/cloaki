@@ -24,11 +24,11 @@ function Bets1X2({ bets }) {
   });
 
   return (
-    <div style={{ display: "flex", gap: "1em" }}>
+    <>
       <Bet style={colorStyle1} bet={bet1} />
       <Bet style={colorStyle2} bet={betX} />
       <Bet style={colorStyle3} bet={bet2} />
-    </div>
+    </>
   );
 }
 

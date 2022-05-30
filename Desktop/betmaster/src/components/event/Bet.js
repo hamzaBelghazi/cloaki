@@ -15,7 +15,6 @@ function Bet({ bet }) {
         gap: "12px",
       }}
     >
-      <span>{bet?.Name}</span>
       <span style={colorStyle} className="bet">
         {bet?.Price}
       </span>

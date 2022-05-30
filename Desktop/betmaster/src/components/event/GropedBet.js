@@ -18,9 +18,8 @@ function GropedBet({ bet }) {
     <div
       style={{
         display: "flex",
-        gap: "1em",
         justifyContent: "space-between",
-        margin: "5px 0px",
+        width: "100%",
       }}
     >
       <span style={colorStyle} className="bet">

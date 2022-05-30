@@ -7,11 +7,11 @@ function BetsDouble({ bets }) {
   const bet2X = bets?.find((bet) => bet.Name === "X2");
 
   return (
-    <div style={{ display: "flex", gap: "1em" }}>
+    <>
       <Bet bet={bet1X} />
       <Bet bet={bet12} />
       <Bet bet={bet2X} />
-    </div>
+    </>
   );
 }
 

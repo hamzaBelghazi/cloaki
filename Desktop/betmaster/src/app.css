@@ -1,3 +1,10 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .lds-facebook {
   position: relative;
   margin: 0 auto;
@@ -49,9 +56,72 @@ span.bet {
 }
 
 .group {
-  height: 50px;
+  display: flex;
+  flex-direction: column;
+  height: 40px;
   overflow: hidden;
+  width: 100%;
 }
 .group:hover {
   height: auto;
+}
+
+.game_card {
+  display: flex;
+}
+.table_board {
+  flex: 1;
+  border: 1px solid gray;
+  margin-right: -1px;
+  margin-bottom: -1px;
+}
+.participant {
+  display: flex;
+  justify-content: space-around;
+  padding: 12px;
+}
+.markets {
+  flex: 3;
+  display: flex;
+  justify-content: space-between;
+}
+.markets > div {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 12px;
+}
+.markets > div {
+  border: 1px solid gray;
+  margin-right: -1px;
+  margin-bottom: -1px;
+}
+
+.indicators {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 12px;
+
+  border: 1px solid gray;
+}
+.event {
+  flex: 1;
+}
+.odd_tbls {
+  flex: 3;
+  display: flex;
+  justify-content: space-between;
+}
+
+.odd_indic {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+
+.odd_indic span {
+  width: 50px;
+  text-align: center;
 }
