@@ -68,8 +68,10 @@ function App() {
       const fxtr = newEvents.find((ev) => ev.id === FexId);
       if (fxtr) {
         const betIndx = fxtr.markets.findIndex(
-          (bet) => (bet.Id = markets[0].Id)
+          (bet) => bet.Id === markets[0].Id
         );
+        console.log(betIndx);
+        console.log(fxtr.markets[betIndx]);
         fxtr.markets[betIndx] = markets[0];
         newEvents[fxtrIndex] = fxtr;
         console.log(newEvents[fxtrIndex]);
@@ -82,6 +84,12 @@ function App() {
       updateMarket(msg[0]?.FixtureId, msg[0]?.Markets);
     });
   }, [events]);
+
+  useEffect(() => {
+    socket.current.on("fixture", (msg) => {
+      // console.log(msg);
+    });
+  }, []);
 
   if (events.length === 0) {
     return (
