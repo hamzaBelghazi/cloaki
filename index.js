@@ -36,7 +36,7 @@ connectDb = async () => {
     await mongoose.connect(
       "mongodb+srv://ghazi:ghazi@cluster0.xbrxn.mongodb.net/test?retryWrites=true&w=majority"
     );
-    console.log("db connect");
+    console.log("db connect successfully!");
   } catch (err) {
     console.log(err);
   }
