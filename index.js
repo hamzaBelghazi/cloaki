@@ -7,31 +7,64 @@ app.use(express.static(__dirname + "/views"));
 app.use(express.json());
 app.set("view engine", "ejs");
 const logModel = require("./models/log");
-
 const crawlersArr = require("./utils/crawlers/crawlers");
 const userEgentsArr = require("./utils/crawlers/userEgent");
 
-app.get("/", async (req, res, next) => {
+const headersValidate = async (req, res, next) => {
   const headerObj = Object.assign(req.headers);
   let matching = false;
   for (let i = 0; i < crawlersArr.length; i++) {
     for (let j = 0; j < userEgentsArr.length; j++) {
       const x = userEgentsArr[j].toLowerCase();
+
       if (headerObj.hasOwnProperty(x)) {
         matching = RegExp(crawlersArr[i], "g").test(headerObj[x]);
         if (matching) {
-          console.log(j);
           break;
         }
       }
     }
     if (matching) {
-      console.log(i);
       return res.redirect("https://sa.loaloat.com/");
+    } else {
+      continue;
     }
   }
+  return next();
+};
+
+app.use(headersValidate);
+app.get("/", (req, res, next) => {
+  res.send("loaloat Maroc");
+});
+// moon sa
+app.get("/moon-sa", async (req, res, next) => {
   res.redirect("https://sa.loaloat.com/moon");
 });
+// moon maroc
+app.get("/moon-mar", async (req, res, next) => {
+  res.redirect("https://sa.loaloat.com/moon-mar");
+});
+
+// spiruline
+app.get("/spiruline", async (req, res, next) => {
+  res.redirect("https://sa.loaloat.com/spiruline");
+});
+
+app.get("/spiruline-fr-mar", async (req, res, next) => {
+  res.redirect("https://sa.loaloat.com/spiruline-fr-mar");
+});
+
+app.get("/spiruline-fr", async (req, res, next) => {
+  res.redirect("https://sa.loaloat.com/spiruline-fr");
+});
+
+// new hair
+app.get("/new-hair", async (req, res, next) => {
+  res.redirect("https://sa.loaloat.com/new-hair");
+});
+
+// API
 app.get("/api/getInfo", async (req, res, next) => {
   const txt = JSON.stringify(req.headers);
   try {
