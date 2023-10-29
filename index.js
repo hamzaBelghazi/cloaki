@@ -41,6 +41,7 @@ app.get("/", (req, res, next) => {
 app.get("/moon-sa", async (req, res, next) => {
   res.redirect("https://sa.loaloat.com/moon");
 });
+
 // moon maroc
 app.get("/moon-mar", async (req, res, next) => {
   res.redirect("https://sa.loaloat.com/moon-mar");
@@ -56,7 +57,7 @@ app.get("/spiruline-fr-mar", async (req, res, next) => {
 });
 
 app.get("/spiruline-fr", async (req, res, next) => {
-  res.redirect("https://sa.loaloat.com/spiruline-fr");
+  res.redirect("https://afr.loa-loat.com/spirulina-fr");
 });
 
 // new hair
