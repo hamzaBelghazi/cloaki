@@ -6,7 +6,6 @@ const mongoose = require("mongoose");
 app.use(express.static(__dirname + "/views"));
 app.use(express.json());
 app.set("view engine", "ejs");
-const logModel = require("./models/log");
 const crawlersArr = require("./utils/crawlers/crawlers");
 const userEgentsArr = require("./utils/crawlers/userEgent");
 
@@ -25,7 +24,7 @@ const headersValidate = async (req, res, next) => {
       }
     }
     if (matching) {
-      return res.redirect("https://sa.loaloat.com/");
+      return res.redirect("https://asia.loaloat.com/");
     } else {
       continue;
     }
@@ -38,8 +37,8 @@ app.get("/", (req, res, next) => {
   res.send("loaloat Maroc");
 });
 // moon sa
-app.get("/moon-sa", async (req, res, next) => {
-  res.redirect("https://sa.loaloat.com/moon");
+app.get("/new-hair", async (req, res, next) => {
+  res.redirect("https://asia.loa-loat.com/new-hair");
 });
 
 // moon maroc

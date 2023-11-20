@@ -30,6 +30,12 @@ const userSchema = new Schema(
       type: String,
       enum: ["gold", "silver", "platin"],
     },
+    passwordResetToken: {
+      type: String,
+    },
+    passwordResetDate: {
+      type: Date,
+    },
   },
   {
     timestamps: true,
@@ -37,3 +43,5 @@ const userSchema = new Schema(
     toObject: { virtuals: true },
   }
 );
+
+module.exports = model("users", userSchema);
