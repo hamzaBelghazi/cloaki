@@ -17,6 +17,14 @@ const CompigneSchema = new Schema(
     isEnabeled: {
       type: String,
     },
+    cloakedLink: {
+      type: String,
+      default: function () {
+        const link = this.url.split("/")[2];
+        return link;
+      },
+      unique: true,
+    },
   },
   {
     timestamps: true,

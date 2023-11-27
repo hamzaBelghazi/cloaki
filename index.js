@@ -47,21 +47,12 @@ app.get("/moon-mar", async (req, res, next) => {
 });
 
 // spiruline
-app.get("/spiruline", async (req, res, next) => {
-  res.redirect("https://sa.loaloat.com/spiruline");
-});
-
-app.get("/spiruline-fr-mar", async (req, res, next) => {
-  res.redirect("https://sa.loaloat.com/spiruline-fr-mar");
+app.get("/sulidin", async (req, res, next) => {
+  res.redirect("https://asia.loa-loat.com/sulidin");
 });
 
 app.get("/spiruline-fr", async (req, res, next) => {
   res.redirect("https://afr.loa-loat.com/spirulina-fr");
-});
-
-// new hair
-app.get("/new-hair", async (req, res, next) => {
-  res.redirect("https://sa.loaloat.com/new-hair");
 });
 
 // API
