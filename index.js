@@ -71,6 +71,9 @@ app.get("/spiruline-fr", async (req, res, next) => {
 app.get("/hairsup", async (req, res, next) => {
   res.redirect("https://asia.loa-loat.com/soup");
 });
+app.get("/hairsup-kw", async (req, res, next) => {
+  res.redirect("https://asia.loa-loat.com/sup-kw");
+});
 
 // API
 app.get("/api/getInfo", async (req, res, next) => {
