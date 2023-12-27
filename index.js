@@ -78,6 +78,10 @@ app.get("/hairsup-kw", async (req, res, next) => {
 app.get("/prostate-oil", async (req, res, next) => {
   res.redirect("https://asia.loa-loat.com/prostat-oil");
 });
+app.get("/prostate-oil-pro", async (req, res, next) => {
+  res.redirect("https://asia.loa-loat.com/pro-prostata");
+});
+
 
 // API
 app.get("/api/getInfo", async (req, res, next) => {
