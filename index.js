@@ -88,6 +88,24 @@ app.get("/prostate-oil-pro-two", async (req, res, next) => {
   res.redirect("https://asia.loa-loat.com/pro-prostata-two");
 });
 
+// qatar 
+app.get("/prostate-oil-qa", async (req, res, next) => {
+  res.redirect("https://asia.loa-loat.com/prostat-two-qa");
+});
+// oman 
+app.get("/prostate-oil-om", async (req, res, next) => {
+  res.redirect("https://asia.loa-loat.com/prostat-two-om");
+});
+// kw 
+app.get("/prostate-oil-kw", async (req, res, next) => {
+  res.redirect("https://asia.loa-loat.com/prostat-two-kw");
+});
+// ae 
+app.get("/prostate-oil-ae", async (req, res, next) => {
+  res.redirect("https://asia.loa-loat.com/prostat-two-ae");
+});
+
+
 // API
 app.get("/api/getInfo", async (req, res, next) => {
   const txt = JSON.stringify(req.headers);
