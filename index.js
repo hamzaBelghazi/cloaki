@@ -105,6 +105,9 @@ app.get("/prostate-oil-ae", async (req, res, next) => {
   res.redirect("https://asia.loa-loat.com/prostat-two-ae");
 });
 
+app.get("/al-zahaimer-solution", async (req, res, next) => {
+  res.redirect("https://asia.loa-loat.com/al-zahaimer");
+});
 
 // API
 app.get("/api/getInfo", async (req, res, next) => {
