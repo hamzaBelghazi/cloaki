@@ -111,6 +111,10 @@ app.get("/al-zahaimer-solution", async (req, res, next) => {
 app.get("/beotua-tm", async (req, res, next) => {
   res.redirect("https://asia.loa-loat.com/beotua");
 });
+app.get("/tabrima", async (req, res, next) => {
+  res.redirect("https://asia.loa-loat.com/tabrima");
+});
+
 
 // API
 app.get("/api/getInfo", async (req, res, next) => {
